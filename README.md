@@ -10,6 +10,8 @@ cd ~/ros2_ws/src
 
 2) create a package:
 
+# bars_robot_detector
+
 ros2 pkg create drobot --build-type ament_python
 
 3) install the folders (meshes, launch, rviz, urdf) inside the package (drobot), next to resource folder
@@ -35,5 +37,3 @@ name of the first object: wall
 name of the second object: bar
 
 
-
-# bars_robot_detector
