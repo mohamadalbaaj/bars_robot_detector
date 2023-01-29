@@ -1,3 +1,5 @@
+# bars_robot_detector
+
 steps to setup the package:
 
 1) create a workspace:
@@ -9,8 +11,6 @@ and access the work space
 cd ~/ros2_ws/src
 
 2) create a package:
-
-# bars_robot_detector
 
 ros2 pkg create drobot --build-type ament_python
 
