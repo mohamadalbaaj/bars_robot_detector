@@ -18,6 +18,8 @@ ros2 pkg create drobot --build-type ament_python
 
 4) install the files (bar.py, wall.py, joystick.py, distance_calculator.py) inside the package (drobot), again inside the folder (drobot), next to __init__.py
 
+5) open the setup.py file in your package on your computer, copy and paste the code from the file here into your file
+
 
 steps to run the package: open the terminal and access the workspace (cd ~/ros2_ws)
 
