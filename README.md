@@ -19,7 +19,7 @@ ros2 pkg create drobot --build-type ament_python
 4) install the files (bar.py, wall.py, joystick.py, distance_calculator.py) inside the package (drobot), again inside the folder (drobot), next to __init__.py
 
 
-steps to run the package: open the terminal and access the workspace (cd ~/ros2_ws/src)
+steps to run the package: open the terminal and access the workspace (cd ~/ros2_ws)
 
 1)in the first terminal type (colcon build --packages-select drobot)
 
