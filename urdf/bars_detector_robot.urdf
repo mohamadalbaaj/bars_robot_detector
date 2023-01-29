@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot_base">
+  <link name="odom">
+  </link>
+
+  <link name="base_link">
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 3.14" />
+      <geometry>
+        <mesh filename="package://drobot/meshes/robot_base.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+  </link>
+
+<link name="front_left_wheel">
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh filename="package://drobot/meshes/wheel.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+  </link>
+
+<link name="front_right_wheel">
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh filename="package://drobot/meshes/wheel.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+  </link>
+
+<link name="rear_left_wheel">
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh filename="package://drobot/meshes/wheel.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+  </link>
+
+<link name="rear_right_wheel">
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh filename="package://drobot/meshes/wheel.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+  </link>
+
+  <!-- this is the arm -->
+
+  <link name="base">
+    <visual>
+      <geometry>
+        <mesh filename="package://drobot/meshes/base.dae"/>
+      </geometry>
+      <origin xyz="0 0 0"/>
+    </visual>
+  </link>
+
+  <link name="shoulder">
+    <visual>
+      <geometry>
+        <mesh filename="package://drobot/meshes/shoulder.dae"/>
+      </geometry>
+      <origin xyz="0 0 0"/>
+    </visual>
+  </link>
+
+  <link name="arm1">
+    <visual>
+      <geometry>
+        <mesh filename="package://drobot/meshes/arm1.dae"/>
+      </geometry>
+      <origin xyz="-0.01 0 -0.41"/>
+    </visual>
+  </link>
+
+  <link name="middle">
+    <visual>
+      <geometry>
+        <mesh filename="package://drobot/meshes/middle.dae"/>
+      </geometry>
+      <origin xyz="-0.56 0 -0.41"/>
+    </visual>
+  </link>
+
+  <link name="arm2">
+    <visual>
+      <geometry>
+        <mesh filename="package://drobot/meshes/arm2.dae"/>
+      </geometry>
+      <origin xyz="-0.56 0 -0.41"/>
+    </visual>
+  </link>
+
+  <link name="head">
+    <visual>
+      <geometry>
+        <mesh filename="package://drobot/meshes/head.dae"/>
+      </geometry>
+      <origin xyz="-1.1 0 -0.41"/>
+    </visual>
+  </link>
+
+  <joint name="mainn" type="fixed">
+        <parent link="odom"/>
+        <child  link="base_link"/>
+  </joint>
+
+  <joint name="main" type="fixed">
+        <parent link="base_link"/>
+        <child  link="base"/>
+  </joint>
+
+  <joint name="bs" type="continuous">
+        <parent link="base"/>
+        <child link="shoulder"/>
+        <axis   xyz="0 0 1"/>
+        <origin xyz="0 0 0"/>
+  </joint>
+
+  <joint name="sa" type="revolute">
+        <parent link="shoulder"/>
+        <child  link="arm1"/>
+        <axis   xyz="0 1 0"/>
+        <limit effort="1000.0" lower="-3.5" upper="0.7" velocity="0.5"/>
+        <origin xyz="0.01 0 0.41"/>
+  </joint>
+
+  <joint name="a1m" type="revolute">
+        <parent link="arm1"/>
+        <child  link="middle"/>
+        <axis   xyz="0 1 0"/>
+        <limit effort="1000.0" lower="-2.5" upper="2.5" velocity="0.5"/>
+        <origin xyz="0.56 0 0"/>
+  </joint>
+
+  <joint name="ma2" type="fixed">
+        <parent link="middle"/>
+        <child link="arm2"/>
+        <origin xyz="0 0 0"/>
+  </joint>
+
+  <joint name="a2h" type="revolute">
+        <parent link="arm2"/>
+        <child link="head"/>
+        <axis   xyz="0 1 0"/>
+        <limit effort="1000.0" lower="-0.8" upper="1.5" velocity="0.5"/>
+        <origin xyz="0.535 0 0"/>
+  </joint>
+
+
+  <joint name="front_left_wheel_joint" type="continuous">
+    <axis xyz="0 1 0"/>
+    <parent link ="base_link"/>
+    <child link ="front_left_wheel"/>
+    <origin rpy ="0 0 0" xyz= "0.220 0.250 0"/>
+  </joint>
+
+
+  <joint name="front_right_wheel_joint" type="continuous">
+    <axis xyz="0 1 0"/>
+    <parent link ="base_link"/>
+    <child link ="front_right_wheel"/>
+    <origin rpy ="0 0 0" xyz= "0.220 -0.250 0"/>
+  </joint>
+
+  <joint name="rear_left_wheel_joint" type="continuous">
+    <axis xyz="0 1 0"/>
+    <parent link ="base_link"/>
+    <child link ="rear_left_wheel"/>
+    <origin rpy ="0 0 0" xyz= "-0.220 0.250 0"/>
+  </joint>
+
+  <joint name="rear_right_wheel_joint" type="continuous">
+    <axis xyz="0 1 0"/>
+    <parent link ="base_link"/>
+    <child link ="rear_right_wheel"/>
+    <origin rpy ="0 0 0" xyz= "-0.220 -0.250 0"/>
+  </joint>
+
+</robot>
