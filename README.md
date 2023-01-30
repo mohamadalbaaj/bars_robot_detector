@@ -22,9 +22,9 @@
 
 ## To-Do List
 1. Edit the code of distance_calculator.py for accuracy (required)
-2. Write the documentation explaining the idea, procedure, tools, and object parameters (required)
-3. Create a video to demonstrate the project and robot movement (required)
-4. Create slides for presentation (required)
-5. (Optional) Create a params.yaml file to edit parameters from one file.
-6. (Optional) Set range for detecting bars and export results in .csv file format.
+2. Set range for detecting bars and export results in .csv file format (required)
+3. Write the documentation explaining the idea, procedure, tools, and object parameters (required)
+4. Create a video to demonstrate the project and robot movement (required)
+5. Create slides for presentation (required)
+6. (Optional) Create a params.yaml file to edit parameters from one file.
 7. (Optional) Create setup.exe file with a good icon.
