@@ -26,5 +26,6 @@
 3. Write the documentation explaining the idea, procedure, tools, and object parameters (required)
 4. Create a video to demonstrate the project and robot movement (required)
 5. Create slides for presentation (required)
-6. (Optional) Create a params.yaml file to edit parameters from one file.
-7. (Optional) Create setup.exe file with a good icon.
+6. (Optional) doing it for the rest of the bars in longitude and latitude.
+7. (Optional) Create a params.yaml file to edit parameters from one file.
+8. (Optional) Create setup.exe file with a good icon.
