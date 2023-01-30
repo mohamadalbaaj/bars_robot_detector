@@ -1,7 +1,7 @@
 # bars_robot_detector
 
 ## Setup
-1. Create a workspace: `mkdir -p ~/ros2_ws/src` and access it with `cd ~/ros2_ws/src`
+1. Create a workspace: `mkdir -p ~/ros2_ws/src` and access it with `cd ~/ros2_ws/src` (if you have ros2_ws already use another name)
 2. Create a package: `ros2 pkg create drobot --build-type ament_python`
 3. Install the folders (meshes, launch, rviz, urdf) inside the package (drobot), next to resource folder.
 4. Install the files (bar.py, wall.py, joystick.py, distance_calculator.py) inside the package (drobot), again inside the folder (drobot), next to __init__.py.
@@ -21,10 +21,10 @@
 5. Second object name: `bar`
 
 ## To-Do List
-1. Write the documentation explaining the idea, procedure, tools, and object parameters (required)
-2. Create a video to demonstrate the project and robot movement (required)
-3. Create slides for presentation (required)
-4. Edit the code of distance_calculator.py for accuracy (required)
+1. Edit the code of distance_calculator.py for accuracy (required)
+2. Write the documentation explaining the idea, procedure, tools, and object parameters (required)
+3. Create a video to demonstrate the project and robot movement (required)
+4. Create slides for presentation (required)
 5. (Optional) Create a params.yaml file to edit parameters from one file.
 6. (Optional) Set range for detecting bars and export results in .csv file format.
 7. (Optional) Create setup.exe file with a good icon.
