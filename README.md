@@ -11,7 +11,7 @@
 1. Access the workspace: `cd ~/ros2_ws`
 2. Build the package: `colcon build --packages-select drobot`
 3. Launch the package: `. install/setup.bash && ros2 launch drobot drobot_launch.py`
-4. Run distance_calculator: `. install/setup.bash && ros2 run drobot distance_calculator.py`
+4. Run distance_calculator: `. install/setup.bash && ros2 run drobot distance_calculator`
 
 ## Object Names
 1. Workspace name: `ros2_ws`
