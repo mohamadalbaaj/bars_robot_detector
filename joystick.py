@@ -15,7 +15,7 @@ class control_your_robot(Node):
         self.odom_broadcaster = TransformBroadcaster(self, 10)
         self.joystick_sub = self.create_subscription(Joy, 'joy', self.getJoystickInput, 10)
 
-        self.scale_factor = 0.06
+        self.scale_factor = 0.02
 
         # Attributes to define the starting position of the robot
         self.x = 0.0
