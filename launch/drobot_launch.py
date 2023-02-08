@@ -8,6 +8,9 @@ from launch                            import LaunchDescription
 
 import os
 
+import numpy as np
+import math
+
 
 # The following function is mandatory
 def generate_launch_description():
@@ -32,11 +35,11 @@ def generate_launch_description():
     robot_description = ParameterValue(Command(['xacro ', LaunchConfiguration('bars_detector_robot')]),
                                        value_type = str)
 
-    # joystick
-    joystick_node = Node(package    = "drobot",
-                         executable = "joystick",
-                         output     = "screen",
-                         namespace  = None)
+    # jointstate_joystick
+    jointstate_joystick_node = Node(package    = "drobot",
+                                   executable  = "jointstate_joystick",
+                                   output      = "screen",
+                                   namespace   = None)
 
 
     # Configure the robot_state_publisher
@@ -59,18 +62,11 @@ def generate_launch_description():
                      namespace  = None,
                      arguments  = ["-d", LaunchConfiguration("rvizconfig")])
 
-    # Configure the joint_state_publisher_gui
-    joint_state = Node(package     = "joint_state_publisher_gui",
-                        executable = "joint_state_publisher_gui",
-                        name       = "joint_state_publisher_gui",
-                        output     = "screen")
-
     # static_transform_publisher
-    node = Node(package    = "tf2_ros",
-                executable = "static_transform_publisher",
-                output     = "screen",
-                arguments  = ["0", "0", "0", "0", "0", "0","odom","head"]
-                )
+    tf2_node = Node(package    = "tf2_ros",
+                    executable = "static_transform_publisher",
+                    output     = "screen",
+                    arguments  = ["0", "0", "0", "0", "0", "0","odom","head"])
 
     # wall
     wall_node = Node(package    = "drobot",
@@ -84,6 +80,12 @@ def generate_launch_description():
                      output     = "screen",
                      namespace  = None)
 
+    # enviroment
+    enviroment_node = Node(package     = "drobot",
+                           executable  = "enviroment",
+                           output      = "screen",
+                           namespace   = None)
+
     # distance_calculator
     distance_calculator_node = Node(package     = "drobot",
                                      executable = "distance_calculator",
@@ -93,15 +95,16 @@ def generate_launch_description():
 
     ld.add_action(model_arg)
     ld.add_action(rviz_arg)
-    ld.add_action(joystick_node)
+    ld.add_action(jointstate_joystick_node)
     ld.add_action(robot_state_node)
-    ld.add_action(joint_state)
     ld.add_action(joy_node)
     ld.add_action(rviz_node)
-    ld.add_action(node)
+    ld.add_action(tf2_node)
     ld.add_action(wall_node)
     ld.add_action(bar_node)
+    ld.add_action(enviroment_node)
     #ld.add_action(distance_calculator_node)
+
 
 
     return ld
