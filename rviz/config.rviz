@@ -8,6 +8,7 @@ Panels:
         - /RobotModel1
         - /Marker1
         - /MarkerArray1
+        - /Marker2
       Splitter Ratio: 0.5
     Tree Height: 427
   - Class: rviz_common/Views
@@ -94,6 +95,10 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        odom:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         rear_left_wheel:
           Alpha: 1
           Show Axes: false
@@ -159,7 +164,8 @@ Visualization Manager:
                 arm1:
                   middle:
                     arm2:
-                      {}
+                      head:
+                        {}
             front_left_wheel:
               {}
             front_right_wheel:
@@ -168,8 +174,6 @@ Visualization Manager:
               {}
             rear_right_wheel:
               {}
-          head:
-            {}
       Update Interval: 0
       Value: true
     - Class: rviz_default_plugins/Marker
@@ -190,12 +194,26 @@ Visualization Manager:
       Name: MarkerArray
       Namespaces:
         bar: true
+        bar2: true
       Topic:
         Depth: 5
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /bar
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: Marker
+      Namespaces:
+        enviroment: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /enviroment
       Value: true
   Enabled: true
   Global Options:
@@ -227,10 +245,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.3400000333786011
+      Pitch: 0.36000001430511475
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.638188362121582
+      Yaw: 5.458192825317383
     Saved: ~
 Window Geometry:
   Displays:
