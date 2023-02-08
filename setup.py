@@ -27,10 +27,11 @@ setup(
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
-        'console_scripts': ['joystick = drobot.joystick:main',
+        'console_scripts': ['jointstate_joystick = drobot.jointstate_joystick:main',
                             'wall = drobot.wall:main',
                             'distance_calculator = drobot.distance_calculator:main',
                             'bar = drobot.bar:main',
+                            'enviroment = drobot.enviroment:main',
 
         ],
     },
