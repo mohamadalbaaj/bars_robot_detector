@@ -17,9 +17,10 @@
 1. Workspace name: `ros2_ws`
 2. Package name: `drobot`
 3. Robot name: `bars_detector_robot`
-4. First object name: `wall`
-5. Second object name: `bar`
-6. Third object name: `enviroment`
+4. Base frame name:`odom`
+5. First object name: `wall`
+6. Second object name: `bar`
+7. Third object name: `enviroment`
 
 ## To-Do List
 1. Edit the code of distance_calculator.py for accuracy (required)
