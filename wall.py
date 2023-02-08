@@ -20,9 +20,9 @@ class Wall(Node):
       self.wall.type = Marker().MESH_RESOURCE
       self.wall.action = Marker().ADD
       
-      self.wall.pose.position.x = 2.0
-      self.wall.pose.position.y = 0.0
-      self.wall.pose.position.z = 1.0
+      self.wall.pose.position.x = 3.6
+      self.wall.pose.position.y = -0.07
+      self.wall.pose.position.z = 0.7
 
       self.wall.pose.orientation.x = 0.0
       self.wall.pose.orientation.y = 0.0
@@ -33,10 +33,10 @@ class Wall(Node):
       self.wall.scale.y = 1.0
       self.wall.scale.z = 1.0
 
-      self.wall.color.a = 1.0
-      self.wall.color.r = 0.5
-      self.wall.color.g = 0.5
-      self.wall.color.b = 0.0
+      self.wall.color.a = 0.8
+      self.wall.color.r = 0.52
+      self.wall.color.g = 0.52
+      self.wall.color.b = 0.52
 
       self.wall.mesh_resource = "package://drobot/meshes/wall.dae"
 
@@ -54,7 +54,7 @@ class Wall(Node):
 
 def main(args=None):
    rclpy.init(args=args)
-   obj1 = Wall('any_new_name')
+   obj1 = Wall('wall')
 
    try:
       rclpy.spin(obj1)
