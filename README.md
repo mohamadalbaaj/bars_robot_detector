@@ -5,14 +5,14 @@
 - ROS2 Humble
 ### Required packages
 Use the following command to install the necessary packages:
-sudo apt install ros-humble-urdf-tutorial
-sudo apt install joystick
-sudo apt install jstest-gtk
-sudo apt install ros-humble-joy-linux
-sudo apt install ros-humble-tf-transformations
+- sudo apt install ros-humble-urdf-tutorial
+- sudo apt install joystick
+- sudo apt install jstest-gtk
+- sudo apt install ros-humble-joy-linux
+- sudo apt install ros-humble-tf-transformations
 
 Additionally, install the `transforms3d` package using the following command:
-sudo pip3 install transforms3d
+- sudo pip3 install transforms3d
 
 ### Hardware requirements
 - Joystick
