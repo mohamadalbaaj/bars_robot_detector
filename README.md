@@ -33,11 +33,3 @@ Note: Make sure to have the above mentioned software and hardware requirements b
 5. First object name: `wall`
 6. Second object name: `bar`
 7. Third object name: `enviroment`
-
-## To-Do List
-1. Write the documentation explaining the idea, procedure, tools, and object parameters (required)
-2. Create a video to demonstrate the project and robot movement (required)
-3. Create slides for presentation (required)
-4. (Optional) doing it for the rest of the bars in longitude and latitude.
-5. (Optional) Create a params.yaml file to edit parameters from one file.
-6. (Optional) Create setup.exe file with a good icon.
