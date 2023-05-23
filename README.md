@@ -1,5 +1,5 @@
 # bars_robot_detector
-
+![Image Alt Text](./bars_robot_detector/asset/bars_detector.jpeg)
 ## Prerequisites
 - Ubuntu Linux operating system
 - ROS2 Humble
